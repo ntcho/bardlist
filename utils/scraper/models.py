@@ -163,7 +163,7 @@ class Course:
                 quote(additional_schedule_str),
                 quote(self.description),
                 self.crn_number,
-                self.program,
+                quote(self.program),
                 self.source,
             ]
         )
