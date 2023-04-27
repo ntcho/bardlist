@@ -203,7 +203,9 @@ def write(filename="result.csv", courses: CourseList = None, verbose=False):
         )
         for crn_number in courses:
             line = str(courses[crn_number])
-            file.write(line + "\n")
+            
+            if len(line) > 1:
+                file.write(line + "\n")
 
             if verbose:
                 print(line)
